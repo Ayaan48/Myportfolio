@@ -1,0 +1,193 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-mode {
+  background-color: #0b0c10;
+  color: white;
+}
+
+.light-mode {
+  background-color: #d6e9ff;
+  color: #111;
+}
+
+.app-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.canvas-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: auto; /* Allow mouse input */
+}
+.light-mode .canvas-container {
+  background: linear-gradient(to top, #a0d8f1 0%, #dff6ff 100%);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  pointer-events: none; /* Disable pointer events for wrapper */
+}
+
+.content * {
+  pointer-events: auto; /* Re-enable clicks for links, buttons etc */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: transparent;
+  z-index: 10;
+  position: relative;
+}
+
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.content {
+  padding: 2rem;
+  padding-bottom: 4rem;
+}
+
+.home-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.home-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.home-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 200px;
+}
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.top-name {
+  margin-top: 0;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.content-section {
+  padding: 2rem;
+}
+.connect-list {
+  list-style: none;
+  padding: 0;
+}
+
+.connect-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.connect-list .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resume-button a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #0080ff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-text {
+  color: inherit;
+}
+
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.splash-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
