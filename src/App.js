@@ -67,7 +67,7 @@ function SplashScreen({ onComplete }) {
   return (
     <div className="splash-screen">
       <video autoPlay muted className="splash-video">
-        <source src="/video/intro.mp4" type="video/mp4" />
+        <source src="public/video/intro.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
