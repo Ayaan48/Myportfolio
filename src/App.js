@@ -165,7 +165,7 @@ function Home() {
         <p>"Crafting elegant solutions with code & creativity."</p>
       </div>
       <div className="home-right">
-        <img className="profile-img circle-img" src="/image/myimage.jpg" alt="Ayaan" />
+        <img className="profile-img circle-img" src="public/image/myimage.jpg" alt="Ayaan" />
       </div>
     </motion.section>
   );
